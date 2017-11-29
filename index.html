@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>JavaScript 関数の記述サンプル</title>
+<link rel="stylesheet" href="./index.css">
+<script type="text/javascript" src="./index.js">
+
+</script>
+</head>
+<body>
+<label for="value-1">値1</label>
+<input type="number" id="value-1" />
+<label for="value-2">値2</label>
+<input type="number" id="value-2" />
+<input type="button" value="足し算" onclick="calc(1)" />
+<input type="button" value="引き算" onclick="calc(2)" />
+<input type="button" value="掛け算" onclick="calc(3)" />
+<input type="button" value="割り算" onclick="calc(4)" />
+</body>
+</html>
+
+<!--
+はじめまして。
+
+学生の松谷拓海と申します。
+
+ワタクシでよろしければ質問の方に答えさせていただきます。
+
+まず、scriptの二〜三行目のvar value1の処理ですが、ここではdocument.getElementByIdと言いまして、このgetElementByIdという文章は決まり文句で、()の中の文字列にマッチするhtmlのidを取得してくださいという命令です。二行目の場合はvalue-1というinputの情報を取得しています。
+更にその後に.valueというメソッドが続いています。実はgetElementByIdで指定しただけでは値そのものを取得することができず、inpputの全体の情報を取得していることになります。ここで明示的にinputのvalueを取得するようにメソッドで明示しています。
+
+inputは、ブラウザ上で入力された値はvalueに値を保持しています。そのため、valueを取得すれば、入力された情報を取得することができます。
+
+また、なぜparseIntで囲っているかの理由ですが、取得した状態では文字列のままで、文字列のままでは数式の計算をすることができません。
+
+変数にはいろんな方があるとカリキュラムにもあったと思いますが、getElementByIdからvalueで取得した状態だと、文字列として帰ってくる仕様になっています。
+
+このため、数式で計算できる状態にするために、parseIntで数字型に変換しています。
+こうすることで、式で計算できるようにしています。
+
+以上で解決できましたでしょうか？
+
+-->
